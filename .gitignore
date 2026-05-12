@@ -1,0 +1,13 @@
+# Entorno virtual
+tfm_env/
+
+# Datos pesados y preprocesados
+data/
+preprocesado/
+
+# Modelos guardados (pesos)
+models/*.pth
+
+# Caché de Python
+__pycache__/
+*.pyc
