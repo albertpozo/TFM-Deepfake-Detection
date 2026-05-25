@@ -4,7 +4,6 @@ import sys
 import subprocess
 
 # Ruta al archivo plot_results.py
-# Asumimos que estás en la carpeta raíz TFM y el script está en scripts/
 TARGET_SCRIPT = os.path.join('scripts', 'plot_results.py')
 
 def main():
@@ -13,7 +12,6 @@ def main():
     # 1. Verificar que el archivo existe
     if not os.path.exists(TARGET_SCRIPT):
         print(f"ERROR CRÍTICO: No encuentro el archivo: {TARGET_SCRIPT}")
-        print("Asegúrate de ejecutar esto desde la carpeta raíz 'TFM'")
         return
 
     # 2. Pedir el número al usuario
@@ -37,7 +35,6 @@ def main():
 
     if count == 0:
         print("ADVERTENCIA: No se encontró la línea 'NUM_VIDEOS = ...' en plot_results.py")
-        print("Asegúrate de que plot_results.py tiene una línea escrita así:")
         print("NUM_VIDEOS = 200")
         return
 
@@ -54,6 +51,5 @@ def main():
     # Usamos sys.executable para asegurar que usa el mismo entorno python (tfm_env)
     subprocess.run([sys.executable, TARGET_SCRIPT])
 
-# ESTA ES LA PARTE IMPORTANTE QUE SUELE FALTAR
 if __name__ == "__main__":
     main()

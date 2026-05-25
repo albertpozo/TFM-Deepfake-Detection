@@ -11,9 +11,9 @@ plt.rcParams.update({'font.size': 12})
 LOG_DIR = 'logs'
 IMG_DIR = 'plots'
 
-# --- CONFIGURACIÓN: CAMBIA ESTE NÚMERO MANUALMENTE ANTES DE EJECUTAR ---
-NUM_VIDEOS = 1000  # <--- AQUÍ ES DONDE TIENES QUE CAMBIAR (400 o 600)
-# -----------------------------------------------------------------------
+# --- CONFIGURACIÓN ---
+NUM_VIDEOS = 1000  # <--- CAMBIAR NÚMERO SEGÚN EJECUCIÓN
+# ---------------------
 
 def plot_metrics():
     if not os.path.exists(IMG_DIR):

@@ -5,17 +5,17 @@ from torch.utils.data import DataLoader, random_split
 import sys
 import os
 
-# Truco para poder importar los archivos anteriores
+# Importar los archivos anteriores
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from scripts.dataset import DeepfakeDataset
 from models.td_3dcnn import TD3DCNN
 
 # --- PARÁMETROS ESTÁNDAR (Petición de Paco) ---
-BATCH_SIZE = 2      # Pocos datos por golpe para no saturar memoria
+BATCH_SIZE = 2      # Bajo para no saturar memoria
 LR = 0.0001         # Velocidad de aprendizaje estándar
 EPOCHS = 5          # "Unas cuantas épocas" para ver estabilidad
-DATA_PATH = 'preprocesado' # Carpeta donde guardaste los tensores
+DATA_PATH = 'preprocesado' # Carpeta DE los tensores
 
 def run_training():
     # 1. Preparar Datos
@@ -39,7 +39,7 @@ def run_training():
     criterion = nn.BCELoss() # Función de pérdida para binaria (Real/Fake)
     optimizer = optim.Adam(model.parameters(), lr=LR) # Optimizador estándar
 
-    # 3. Bucle de Entrenamiento (Cerrar el ciclo)
+    # 3. Bucle de Entrenamiento
     for epoch in range(EPOCHS):
         model.train()
         train_loss = 0.0

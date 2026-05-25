@@ -9,7 +9,6 @@ from sklearn.metrics import accuracy_score, roc_auc_score
 import sys
 
 # Importar el modelo 2D y el nuevo Dataset
-# (Asegúrate de ejecutar el script desde la carpeta raíz TFM)
 sys.path.append(os.getcwd())
 from models.efficientnet_2d import EfficientNet2D
 from scripts.dataset_2d import FrameLevelDataset
