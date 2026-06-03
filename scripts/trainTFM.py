@@ -16,7 +16,7 @@ from models.td_3dcnn import TD3DCNN
 # --- CONFIGURACIÓN DEL EXPERIMENTO ---
 NUM_RUNS = 5          # Ejecución de 5 experimentos independientes
 EPOCHS = 25           # Duración extendida
-BATCH_SIZE = 4
+BATCH_SIZE = 2
 LR = 1e-4
 DATA_PATH = 'preprocesado'
 LOG_DIR = 'logs'
